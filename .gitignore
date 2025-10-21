@@ -1,2 +1,6 @@
+.*.sw?
+
+content/wflogs
 content/uploads
+downloads
 releases/bk/content/themes/ink/images/home/inkandspindle_process.mp4
