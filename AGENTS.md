@@ -15,8 +15,11 @@ Follow WordPress PHP standards: tabs for indentation, snake_case functions, and 
 ## Testing Guidelines
 No automated test suite is present, so rely on targeted manual verification. After theme or plugin edits, load key templates (homepage, trade pages, ordering flows) and confirm Gravity Forms, wholesale logins, and Isotope/Packery interactions behave. Clear caches, in-browser and via `wp cache flush`, before validating fixes. Document edge cases covered in the pull request description.
 
-## Commit & Pull Request Guidelines
+## Commit Guidelines
 Keep commits small, with descriptive commit messages. Commit messages should have clear subjects and more details in the body.
 
 ## Security & Configuration Tips
 Never commit credentials from `wp-config.php` or plugin settings exports. Review Redis or CDN settings before deployment to avoid stale assets, and rotate API keys through environment configuration rather than hardcoding them in theme files. Remove temporary debugging toggles and restore production error levels before committing.
+
+## Planning
+Always talk through your plan with me and get me to agree to it before starting to make changes.
