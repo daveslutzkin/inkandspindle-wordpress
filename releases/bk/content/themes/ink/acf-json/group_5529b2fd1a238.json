@@ -1,0 +1,146 @@
+{
+    "key": "group_5529b2fd1a238",
+    "title": "Inspiration",
+    "fields": [
+        {
+            "key": "field_51ff276853a98",
+            "label": "Inspiration",
+            "name": "inspiration",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "row_min": "",
+            "row_limit": "",
+            "layout": "table",
+            "button_label": "Add Image Tile",
+            "min": 0,
+            "max": 0,
+            "sub_fields": [
+                {
+                    "key": "field_51ff277753a99",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "return_format": "array",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_51ff279753a9a",
+                    "label": "Size",
+                    "name": "size",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "default": "Landscape (small)",
+                        "portrait": "Portrait",
+                        "featured": "Landscape (large)"
+                    },
+                    "default_value": {
+                        "default": "default"
+                    },
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_51ff27b153a9b",
+                    "label": "Category",
+                    "name": "category",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "lnterior-lifestyle": "Interior & Lifestyle",
+                        "upholstery": "Upholstery",
+                        "window-furnishings": "Window Furnishings",
+                        "homewares": "Homewares",
+                        "lighting": "Lighting"
+                    },
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "toggle": 0
+                },
+                {
+                    "key": "field_51ff28dd53a9c",
+                    "label": "Caption",
+                    "name": "caption",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "new_lines": "br",
+                    "readonly": 0,
+                    "disabled": 0,
+                    "rows": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "409"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1567988843
+}

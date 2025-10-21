@@ -1,0 +1,452 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ink & Spindle Colour Formulas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="styles/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.typotheque.com/WF-021117-002395.css" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            inkColours = {};      
+                       
+            inkColours["snow (75/25)"] = {};
+            inkColours["snow (75/25)"].cssColour = "ffffff";
+            inkColours["snow (75/25)"].note = "this version of snow is typically used for two colour prints when another colour is to be printed over the top. We find the second colour 'adheres' better when there is less supercover in the mix.";
+            inkColours["snow (75/25)"].bits = new Array();
+            inkColours["snow (75/25)"].bits[0] = {name: "021 (white)", proportion: 75};
+            inkColours["snow (75/25)"].bits[1] = {name: "FD White", proportion: 25};             
+
+            inkColours["transparent white"] = {};
+            inkColours["transparent white"].cssColour = "fdfbf7";
+            inkColours["transparent white"].bits = new Array();
+            inkColours["transparent white"].bits[0] = {name: "021 (white)", proportion: 50};
+            inkColours["transparent white"].bits[1] = {name: "381 (extender)", proportion: 50};        
+            
+            inkColours["cream (updated)"] = {};
+            inkColours["cream (updated)"].cssColour = "faf7ea";
+            inkColours["cream (updated)"].bits = new Array();
+            inkColours["cream (updated)"].bits[0] = {name: "FD White", proportion: 43};
+            inkColours["cream (updated)"].bits[1] = {name: "021 (white)", proportion: 60};             
+            inkColours["cream (updated)"].bits[2] = {name: "057 (yellow GS)", proportion: 0.5};
+            inkColours["cream (updated)"].bits[3] = {name: "046 (yellow RS)", proportion: 0.6};             
+            inkColours["cream (updated)"].bits[4] = {name: "153 (red BS)", proportion: .05};            
+            
+            inkColours["almond"] = {};
+            inkColours["almond"].cssColour = "eddec4";
+            inkColours["almond"].note = "we've had issues with this colour recently being mixed too pale. Check against ink on lid to make sure mix is dark enough, especially if printing on unbleached!";
+            inkColours["almond"].bits = new Array();
+            inkColours["almond"].bits[0] = {name: "381 (extender)", proportion: 74.55};
+            inkColours["almond"].bits[1] = {name: "021 (white)", proportion: 24.85};             
+            inkColours["almond"].bits[2] = {name: "046 (yellow RS)", proportion: .275};
+            inkColours["almond"].bits[3] = {name: "103 (orange)", proportion: .175};             
+            inkColours["almond"].bits[4] = {name: "001 (black)", proportion: .15};                       
+
+            inkColours["sand"] = {};
+            inkColours["sand"].cssColour = "E3B891";
+            inkColours["sand"].bits = new Array();
+            inkColours["sand"].bits[0] = {name: "381 (extender)", proportion: 25};
+            inkColours["sand"].bits[1] = {name: "021 (white)", proportion: 75};             
+            inkColours["sand"].bits[2] = {name: "103 (orange)", proportion: 1.2};
+            inkColours["sand"].bits[3] = {name: "001 (black)", proportion: .15};
+            
+            inkColours["fawn"] = {};
+            inkColours["fawn"].cssColour = "c2ae8e";
+            inkColours["fawn"].bits = new Array();
+            inkColours["fawn"].bits[0] = {name: "381 (extender)", proportion: 73.7};
+            inkColours["fawn"].bits[1] = {name: "021 (white)", proportion: 24.5};             
+            inkColours["fawn"].bits[2] = {name: "046 (yellow RS)", proportion: .8};
+            inkColours["fawn"].bits[3] = {name: "103 (orange)", proportion: .55};             
+            inkColours["fawn"].bits[4] = {name: "001 (black)", proportion: .45};   
+            
+            inkColours["greylead"] = {};
+            inkColours["greylead"].cssColour = "b3b3b3";
+            inkColours["greylead"].bits = new Array();
+            inkColours["greylead"].bits[0] = {name: "381 (extender)", proportion: 99.575};
+            inkColours["greylead"].bits[1] = {name: "001 (black)", proportion: .425};                      
+            
+            inkColours["ash"] = {};
+            inkColours["ash"].cssColour = "6D6E70";
+            inkColours["ash"].bits = new Array();
+            inkColours["ash"].bits[0] = {name: "381 (extender)", proportion: 86};
+            inkColours["ash"].bits[1] = {name: "021 (white)", proportion: 14.3};  
+            inkColours["ash"].bits[2] = {name: "001 (black)", proportion: 2.2};  
+            
+            inkColours["coal (new formula)"] = {};
+            inkColours["coal (new formula)"].cssColour = "424242";
+            inkColours["coal (new formula)"].bits = new Array();
+            inkColours["coal (new formula)"].bits[0] = {name: "381 (extender)", proportion: 77.0};
+            inkColours["coal (new formula)"].bits[1] = {name: "021 (white)", proportion: 20.3};
+            inkColours["coal (new formula)"].bits[2] = {name: "001 (black)", proportion: 11.5};
+            
+            inkColours["lilac"] = {};
+            inkColours["lilac"].cssColour = "D4C8DB";
+            inkColours["lilac"].bits = new Array();
+            inkColours["lilac"].bits[0] = {name: "381 (extender)", proportion: 123.7};
+            inkColours["lilac"].bits[1] = {name: "132 (violet)", proportion: .5};
+            inkColours["lilac"].bits[2] = {name: "001 (black)", proportion: .2}; 
+            
+            inkColours["inky blue"] = {};
+            inkColours["inky blue"].cssColour = "1c1c66";
+            inkColours["inky blue"].bits = new Array();
+            inkColours["inky blue"].bits[0] = {name: "381 (extender)", proportion: 17};
+            inkColours["inky blue"].bits[1] = {name: "218 (blue)", proportion: 72};
+            inkColours["inky blue"].bits[2] = {name: "154 (magenta)", proportion: 9};
+            inkColours["inky blue"].bits[3] = {name: "001 (black)", proportion: 1.3}; 
+            inkColours["inky blue"].bits[4] = {name: "132 (violet)", proportion: 0.9};
+            
+            inkColours["tasman"] = {};
+            inkColours["tasman"].cssColour = "154988";
+            inkColours["tasman"].bits = new Array();
+            inkColours["tasman"].bits[0] = {name: "381 (extender)", proportion: 80};
+            inkColours["tasman"].bits[1] = {name: "218 (blue)", proportion: 24};
+            inkColours["tasman"].bits[2] = {name: "132 (violet)", proportion: 3.6};
+            inkColours["tasman"].bits[3] = {name: "154 (magenta)", proportion: 2.8};
+            inkColours["tasman"].bits[4] = {name: "001 (black)", proportion: 2.0}; 
+            
+            inkColours["indigo"] = {}
+            inkColours["indigo"].cssColour = "6e8bb7";
+            inkColours["indigo"].bits = new Array();
+            inkColours["indigo"].bits[0] = {name: "381 (extender)", proportion: 70.8};
+            inkColours["indigo"].bits[1] = {name: "021 (white)", proportion: 11.0};
+            inkColours["indigo"].bits[2] = {name: "218 (blue)", proportion: 1.8};
+            inkColours["indigo"].bits[3] = {name: "132 (violet)", proportion: .9};
+            inkColours["indigo"].bits[4] = {name: "001 (black)", proportion: .4};
+
+            inkColours["bluestone"] = {};
+            inkColours["bluestone"].cssColour = "415A75";
+            inkColours["bluestone"].bits = new Array();
+            inkColours["bluestone"].bits[0] = {name: "381 (extender)", proportion: 86};
+            inkColours["bluestone"].bits[1] = {name: "021 (white)", proportion: 14.3};
+            inkColours["bluestone"].bits[2] = {name: "218 (blue)", proportion: 2.8}; 
+            inkColours["bluestone"].bits[3] = {name: "001 (black)", proportion: 2.2};
+            inkColours["bluestone"].bits[4] = {name: "132 (violet)", proportion: 1.2};
+            
+            inkColours["mist"] = {};
+            inkColours["mist"].cssColour = "A1B7C2";
+            inkColours["mist"].bits = new Array();
+            inkColours["mist"].bits[0] = {name: "381 (extender)", proportion: 99};
+            inkColours["mist"].bits[1] = {name: "218 (blue)", proportion: 0.5};
+            inkColours["mist"].bits[2] = {name: "001 (black)", proportion: 0.25};
+            inkColours["mist"].bits[3] = {name: "132 (violet)", proportion: 0.25};      
+            
+            inkColours["storm"] = {};
+            inkColours["storm"].cssColour = "DCE9EA";
+            inkColours["storm"].bits = new Array();
+            inkColours["storm"].bits[0] = {name: "381 (extender)", proportion: 86};
+            inkColours["storm"].bits[1] = {name: "021 (white)", proportion: 19.3};
+            inkColours["storm"].bits[2] = {name: "057 (yellow GS)", proportion: .4}; 
+            inkColours["storm"].bits[3] = {name: "154 (magenta)", proportion: .2};
+            inkColours["storm"].bits[4] = {name: "218 (blue)", proportion: .2};
+            inkColours["storm"].bits[5] = {name: "001 (black)", proportion: .15};    
+            
+            inkColours["slate"] = {};
+            inkColours["slate"].cssColour = "5e8b93";
+            inkColours["slate"].bits = new Array();
+            inkColours["slate"].bits[0] = {name: "381 (extender)", proportion: 86};
+            inkColours["slate"].bits[1] = {name: "021 (white)", proportion: 14.3};
+            inkColours["slate"].bits[2] = {name: "218 (blue)", proportion: 2.8}; 
+            inkColours["slate"].bits[3] = {name: "001 (black)", proportion: 1.75};
+            inkColours["slate"].bits[4] = {name: "316 (green)", proportion: .6};
+            
+            inkColours["stream"] = {};
+            inkColours["stream"].cssColour = "a5c9c4";
+            inkColours["stream"].note = "mix at least 2kg of this ink to ensure the formula is correct (esp the black and green)";
+            inkColours["stream"].bits = new Array();
+            inkColours["stream"].bits[0] = {name: "381 (extender)", proportion: 86};
+            inkColours["stream"].bits[1] = {name: "021 (white)", proportion: 14.3};
+            inkColours["stream"].bits[2] = {name: "316 (green)", proportion: .35};
+            inkColours["stream"].bits[3] = {name: "001 (black)", proportion: .35};
+            inkColours["stream"].bits[4] = {name: "218 (blue)", proportion: .2};      
+            
+            inkColours["saltbush"] = {};
+            inkColours["saltbush"].cssColour = "AFC7C3";
+            inkColours["saltbush"].note = "mix at least 2kg of this ink to ensure the formula is correct (esp the black)";
+            inkColours["saltbush"].bits = new Array();
+            inkColours["saltbush"].bits[0] = {name: "381 (extender)", proportion: 99.7};
+            inkColours["saltbush"].bits[1] = {name: "316 (green)", proportion: 0.1};
+            inkColours["saltbush"].bits[2] = {name: "218 (blue)", proportion: 0.1};
+            inkColours["saltbush"].bits[3] = {name: "001 (black)", proportion: 0.15};             
+
+            inkColours["eucalyptus"] = {};
+            inkColours["eucalyptus"].cssColour = "36635a";
+            inkColours["eucalyptus"].bits = new Array();
+            inkColours["eucalyptus"].bits[0] = {name: "381 (extender)", proportion: 63.23};
+            inkColours["eucalyptus"].bits[1] = {name: "021 (white)", proportion: 9.09};
+            inkColours["eucalyptus"].bits[2] = {name: "316 (green)", proportion: 14.59};
+            inkColours["eucalyptus"].bits[3] = {name: "103 (orange)", proportion: 6.73};
+            inkColours["eucalyptus"].bits[4] = {name: "218 (blue)", proportion: 3.5};
+            inkColours["eucalyptus"].bits[5] = {name: "001 (black)", proportion: 2.86};
+            
+            inkColours["rainforest (new)"] = {};
+            inkColours["rainforest (new)"].cssColour = "0b4e24";
+            inkColours["rainforest (new)"].bits = new Array();
+            inkColours["rainforest (new)"].bits[0] = {name: "381 (extender)", proportion: 60};
+            inkColours["rainforest (new)"].bits[1] = {name: "021 (white)", proportion: 12};
+            inkColours["rainforest (new)"].bits[2] = {name: "316 (green)", proportion: 17.6};
+            inkColours["rainforest (new)"].bits[3] = {name: "057 (yellow GS)", proportion: 13};
+            inkColours["rainforest (new)"].bits[4] = {name: "218 (blue)", proportion: 9.6};
+            inkColours["rainforest (new)"].bits[5] = {name: "001 (black)", proportion: 4.85};
+            
+            inkColours["moss"] = {};
+            inkColours["moss"].cssColour = "d9ddc5";
+            inkColours["moss"].bits = new Array();
+            inkColours["moss"].bits[0] = {name: "381 (extender)", proportion: 73.9};
+            inkColours["moss"].bits[1] = {name: "021 (white)", proportion: 24.6};
+            inkColours["moss"].bits[2] = {name: "046 (yellow RS)", proportion: .8};
+            inkColours["moss"].bits[3] = {name: "103 (orange)", proportion: .25};
+            inkColours["moss"].bits[4] = {name: "218 (blue)", proportion: .25};
+            inkColours["moss"].bits[5] = {name: "001 (black)", proportion: .2};      
+
+            inkColours["bushleaf"] = {};
+            inkColours["bushleaf"].cssColour = "8c8743";
+            inkColours["bushleaf"].bits = new Array();
+            inkColours["bushleaf"].bits[0] = {name: "381 (extender)", proportion: 68.8};
+            inkColours["bushleaf"].bits[1] = {name: "021 (white)", proportion: 11.2};
+            inkColours["bushleaf"].bits[2] = {name: "057 (yellow GS)", proportion: 19.2};
+            inkColours["bushleaf"].bits[3] = {name: "001 (black)", proportion: 1.3};              
+            
+            inkColours["olive"] = {};
+            inkColours["olive"].cssColour = "a9a104";
+            inkColours["olive"].bits = new Array();
+            inkColours["olive"].bits[0] = {name: "057 (yellow GS)", proportion: 98.1};
+            inkColours["olive"].bits[1] = {name: "046 (yellow RS)", proportion: 1};
+            inkColours["olive"].bits[2] = {name: "001 (black)", proportion: .6};
+            inkColours["olive"].bits[3] = {name: "316 (green)", proportion: .3};       
+            
+            inkColours["fennel"] = {};
+            inkColours["fennel"].cssColour = "D8C341";
+            inkColours["fennel"].bits = new Array();
+            inkColours["fennel"].bits[0] = {name: "381 (extender)", proportion: 86.0};
+            inkColours["fennel"].bits[1] = {name: "021 (white)", proportion: 14.0}; 
+            inkColours["fennel"].bits[2] = {name: "057 (yellow GS)", proportion: 5.0}; 
+            inkColours["fennel"].bits[3] = {name: "046 (yellow RS)", proportion: 6.0}; 
+            inkColours["fennel"].bits[4] = {name: "001 (black)", proportion: .45}; 
+            
+            inkColours["wattleflower"] = {};
+            inkColours["wattleflower"].cssColour = "EFE4A2";
+            inkColours["wattleflower"].bits = new Array();
+            inkColours["wattleflower"].bits[0] = {name: "381 (extender)", proportion: 80.0};
+            inkColours["wattleflower"].bits[1] = {name: "021 (white)", proportion: 15.0}; 
+            inkColours["wattleflower"].bits[2] = {name: "057 (yellow GS)", proportion: 1.6}; 
+            inkColours["wattleflower"].bits[3] = {name: "046 (yellow RS)", proportion: 1.0}; 
+            inkColours["wattleflower"].bits[4] = {name: "132 (violet)", proportion: 0.1}; 
+            
+            inkColours["yellow ochre"] = {};
+            inkColours["yellow ochre"].cssColour = "d3a500";
+            inkColours["yellow ochre"].bits = new Array();
+            inkColours["yellow ochre"].bits[0] = {name: "057 (yellow GS)", proportion: 75.0};
+            inkColours["yellow ochre"].bits[1] = {name: "046 (yellow RS)", proportion: 18.7}; 
+            inkColours["yellow ochre"].bits[2] = {name: "021 (white)", proportion: 13.5}; 
+            inkColours["yellow ochre"].bits[3] = {name: "132 (violet)", proportion: 0.9}; 
+            inkColours["yellow ochre"].bits[4] = {name: "001 (black)", proportion: .15};
+            
+            inkColours["turmeric"] = {};
+            inkColours["turmeric"].cssColour = "d2970f";
+            inkColours["turmeric"].bits = new Array();
+            inkColours["turmeric"].bits[0] = {name: "046 (yellow RS)", proportion: 89.2};
+            inkColours["turmeric"].bits[1] = {name: "057 (yellow GS)", proportion: 10.4}; 
+            inkColours["turmeric"].bits[2] = {name: "001 (black)", proportion: .4};
+            inkColours["turmeric"].bits[3] = {name: "103 (orange)", proportion: 4}; 
+            
+            inkColours["ginger"] = {};
+            inkColours["ginger"].cssColour = "c98848";
+            inkColours["ginger"].bits = new Array();
+            inkColours["ginger"].bits[0] = {name: "381 (extender)", proportion: 70.0};
+            inkColours["ginger"].bits[1] = {name: "057 (yellow GS)", proportion: 20.0}; 
+            inkColours["ginger"].bits[2] = {name: "021 (white)", proportion: 15.0}; 
+            inkColours["ginger"].bits[3] = {name: "122 (red YS)", proportion: 3.5};
+            inkColours["ginger"].bits[4] = {name: "103 (orange)", proportion: 2.0}; 
+            inkColours["ginger"].bits[5] = {name: "316 (green)", proportion: .6};
+            
+            inkColours["brown ochre"] = {};
+            inkColours["brown ochre"].cssColour = "ad5600";
+            inkColours["brown ochre"].bits = new Array();
+            inkColours["brown ochre"].bits[0] = {name: "381 (extender)", proportion: 68.8};
+            inkColours["brown ochre"].bits[1] = {name: "021 (white)", proportion: 11.6};
+            inkColours["brown ochre"].bits[2] = {name: "103 (orange)", proportion: 24.0}; 
+            inkColours["brown ochre"].bits[3] = {name: "122 (red YS)", proportion: 3.0}; 
+            inkColours["brown ochre"].bits[4] = {name: "001 (black)", proportion: 1.1};
+            inkColours["brown ochre"].bits[5] = {name: "218 (blue)", proportion: .6};
+           
+            inkColours["clay"] = {};
+            inkColours["clay"].cssColour = "c1a883";
+            inkColours["clay"].bits = new Array();
+            inkColours["clay"].bits[0] = {name: "381 (extender)", proportion: 78.8};
+            inkColours["clay"].bits[1] = {name: "021 (white)", proportion: 17.8};
+            inkColours["clay"].bits[2] = {name: "103 (orange)", proportion: 1.6}; 
+            inkColours["clay"].bits[3] = {name: "218 (blue)", proportion: 0.4}; 
+            inkColours["clay"].bits[4] = {name: "153 (red BS)", proportion: 0.2};
+            inkColours["clay"].bits[5] = {name: "001 (black)", proportion: 0.3};
+            
+            inkColours["rust"] = {};
+            inkColours["rust"].cssColour = "9c3511";
+            inkColours["rust"].bits = new Array();
+            inkColours["rust"].bits[0] = {name: "103 (orange)", proportion: 56.5};
+            inkColours["rust"].bits[1] = {name: "122 (red YS)", proportion: 19}; 
+            inkColours["rust"].bits[2] = {name: "021 (white)", proportion: 15};
+            inkColours["rust"].bits[3] = {name: "153 (red BS)", proportion: 5}; 
+            inkColours["rust"].bits[4] = {name: "132 (violet)", proportion: 4.5};
+            
+            inkColours["desert red"] = {};
+            inkColours["desert red"].cssColour = "c63e1b";
+            inkColours["desert red"].bits = new Array();
+            inkColours["desert red"].bits[0] = {name: "381 (extender)", proportion: 80.0};
+            inkColours["desert red"].bits[1] = {name: "122 (red YS)", proportion: 20.0}; 
+            inkColours["desert red"].bits[2] = {name: "046 (yellow RS)", proportion: 8.0};
+            inkColours["desert red"].bits[3] = {name: "316 (green)", proportion: 0.3}; 
+            inkColours["desert red"].bits[4] = {name: "001 (black)", proportion: 0.2};
+                            
+            inkColours["earth"] = {}
+            inkColours["earth"].cssColour = "7c4222";
+            inkColours["earth"].bits = new Array();
+            inkColours["earth"].bits[0] = {name: "381 (extender)", proportion: 60.00};
+            inkColours["earth"].bits[1] = {name: "057 (yellow GS)", proportion: 24.0};
+            inkColours["earth"].bits[2] = {name: "154 (magenta)", proportion: 12.0};
+            inkColours["earth"].bits[3] = {name: "001 (black)", proportion: 1.8};  
+            inkColours["earth"].bits[4] = {name: "132 (violet)", proportion: 1.2};
+            
+            inkColours["deep red (new)"] = {}
+            inkColours["deep red (new)"].cssColour = "9d0626";
+            inkColours["deep red (new)"].bits = new Array();
+            inkColours["deep red (new)"].bits[0] = {name: "381 (extender)", proportion: 60};
+            inkColours["deep red (new)"].bits[1] = {name: "153 (red BS)", proportion: 30};
+            inkColours["deep red (new)"].bits[2] = {name: "001 (black)", proportion: .6};
+            inkColours["deep red (new)"].bits[3] = {name: "316 (green)", proportion: .2};
+            inkColours["deep red (new)"].bits[4] = {name: "046 (yellow RS)", proportion: 2.0};
+            
+            inkColours["davidsons plum"] = {}
+            inkColours["davidsons plum"].cssColour = "7c2b46";
+            inkColours["davidsons plum"].bits = new Array();
+            inkColours["davidsons plum"].bits[0] = {name: "381 (extender)", proportion: 82.9};
+            inkColours["davidsons plum"].bits[1] = {name: "154 (magenta)", proportion: 8.3};
+            inkColours["davidsons plum"].bits[2] = {name: "021 (white)", proportion: 6.2};
+            inkColours["davidsons plum"].bits[3] = {name: "046 (yellow RS)" , proportion: 1.6};
+            inkColours["davidsons plum"].bits[4] = {name: "001 (black)", proportion: 1.0};
+            
+            inkColours["pink ochre"] = {}
+            inkColours["pink ochre"].cssColour = "c4685e";
+            inkColours["pink ochre"].bits = new Array();
+            inkColours["pink ochre"].bits[0] = {name: "381 (extender)", proportion: 71.25};
+            inkColours["pink ochre"].bits[1] = {name: "021 (white)", proportion: 18.5};
+            inkColours["pink ochre"].bits[2] = {name: "154 (magenta)", proportion: 4.75};
+            inkColours["pink ochre"].bits[3] = {name: "103 (orange)", proportion: 3.5};
+            inkColours["pink ochre"].bits[4] = {name: "316 (green)", proportion: .25};
+            
+            inkColours["rose"] = {}
+            inkColours["rose"].cssColour = "e0b19f";
+            inkColours["rose"].note = "Note there is no black or white in this recipe!";
+            inkColours["rose"].bits = new Array();
+            inkColours["rose"].bits[0] = {name: "381 (extender)", proportion: 100};
+            inkColours["rose"].bits[1] = {name: "154 (magenta)", proportion: 1.4};
+            inkColours["rose"].bits[2] = {name: "103 (orange)", proportion: 1.0};  
+            inkColours["rose"].bits[3] = {name: "316 (green)", proportion: .2};
+            
+            inkColours["river salt"] = {}
+            inkColours["river salt"].cssColour = "F2DED7";
+            inkColours["river salt"].bits = new Array();
+            inkColours["river salt"].bits[0] = {name: "381 (extender)", proportion: 78.75};
+            inkColours["river salt"].bits[1] = {name: "021 (white)", proportion: 17.9};
+            inkColours["river salt"].bits[2] = {name: "103 (orange)", proportion: .3};
+            inkColours["river salt"].bits[3] = {name: "153 (red BS)", proportion: .15};  
+            inkColours["river salt"].bits[4] = {name: "001 (black)", proportion: .1};    
+            
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#quantityInput").change(function() {
+                var quantityKgs = $(this).val();
+                $('#ink-colour-table-body tr').each(function() {
+                    var proportionStr = $(this).find("td.proportion").text();
+                    var proportion = proportionStr.substring(0, proportionStr.length - 1);
+                    // Round to the nearest 0.5 grams.
+                    $(this).find("td.result").text((quantityKgs * proportion * 10 * 2).toFixed(0) / 2);
+                });
+            });
+
+            var colourList = $('.colour-list');
+            for (var inkColour in inkColours) {
+                colourList.append('<div class="colour-list-swatch" data-colour="'+inkColour+'" style="background:#'+inkColours[inkColour].cssColour+'"><a href="#">'+inkColour+'</a></div>');
+            }
+
+            $('.colour-list-swatch').click(function() {
+                var colourString = $(this).attr("data-colour");                
+                var inkColour = inkColours[colourString];
+
+                $('.main-title').text(colourString);
+                $('#colour-sample-swatch').css("background", inkColour.cssColour);
+                if (!inkColour.note) {
+                    $('p#note').text("");
+                }
+                else {
+                    $('p#note').text("Note: " + inkColour.note);
+                }
+
+                var inkTable = $('#ink-colour-table-body');
+                inkTable.empty();
+                for (var i = 0; i < inkColour.bits.length; i++) {
+                    var trHtml = '<tr>';
+                    if (!inkColour.bits[i].otherColour) {
+                        trHtml += '<td>'+inkColour.bits[i].name+'</td>';
+                    }
+                    else {
+                        trHtml += '<td style="color:#'+inkColours[inkColour.bits[i].otherColour].cssColour+'">'+inkColour.bits[i].otherColour+'</td>';
+                    }
+                    trHtml += '<td class="proportion">'+inkColour.bits[i].proportion+'%</td><td class="result"></td>';
+                    trHtml += '</tr>';
+                    inkTable.append(trHtml);
+                }
+
+                var inputField = $('#quantityInput');
+                inputField.prop("disabled", false);
+                inputField.attr("autocomplete", "off");
+                inputField.change();
+
+                return false;
+            });
+        });
+        </script>
+	</head>
+
+	<body>
+		<div id="page-content">
+			<div id="logo-header">
+                <img src="images/ink-and-spindle.png" width="200px"/>
+			</div>
+            <div>
+                <h2 class="main-title">select a colour</h2>
+            </div>
+            <div id="colour-sample">
+                <div id="colour-sample-name">Colour sample:</div>
+                <div id="colour-sample-swatch"></div>
+            </div>
+            <div id="calx">
+                <div id="quantity">
+                    <label>Quantity of ink required (kg):</label>
+                    <input id="quantityInput" name="inkweight" type="number" step="0.5"  min="0" max="5" value="1" disabled="true">
+                </div>
+                <table id="ink-colour-table">
+                    <thead>
+                        <tr>
+                            <th>Ink colour</th>
+                            <th>Proportion (%)</th>
+                            <th>Formula (g)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ink-colour-table-body">
+                        <tr>
+                            <td colspan="3" style="text-align: center">Select a Colour</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="note"></p>
+            </div>
+
+            <h3>Colour list</h3>
+            <div class="colour-list"></div>
+		</div>
+	</body>
+</html>
