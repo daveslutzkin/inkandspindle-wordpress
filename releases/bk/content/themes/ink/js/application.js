@@ -60,7 +60,7 @@
 ----------------------------------------------------------------------------------------------------------------- */
 
 function emptyCart(){
-  Cookies.set( 'cart', '', { expires: 36000 } );
+  Cookies.set( 'cart', '[]', { expires: 36000 } );
 }
 
 function addToCart(){
@@ -94,9 +94,7 @@ function addToCart(){
 
   // Cart Cookies
 
-  var cartCookie = Cookies.get( 'cart' );
-
-  var cart = cartCookie ? JSON.parse( cartCookie ) : [];
+  var cart = getCartCookie();
 
   var selected_basecloth_id = get_current_basecloth_id();
   var selected_colour_1_id = get_current_colour_1();
@@ -147,7 +145,7 @@ function removeItemFromCart( index ){
   var $cart = jQuery('#cart');
   var cart = getCartCookie();
 
-  if ( ! cart || ! $cart.length )
+  if ( ! cart.length || ! $cart.length )
     return false;
 
   cart.splice( index, 1 );
@@ -159,11 +157,20 @@ function removeItemFromCart( index ){
 function getCartCookie(){
   var cartCookie = Cookies.get( 'cart' );
 
-  if ( cartCookie && JSON.parse( cartCookie ) ){
-    return JSON.parse( cartCookie )
+  if ( ! cartCookie ){
+    return [];
   }
 
-  return false;
+  try {
+    var parsed = JSON.parse( cartCookie );
+    return Array.isArray( parsed ) ? parsed : [];
+  } catch ( error ) {
+    if ( window.console && console.warn ) {
+      console.warn( 'Resetting invalid cart cookie', error );
+    }
+    Cookies.set( 'cart', '[]', { expires: 36000 } );
+    return [];
+  }
 }
 
 function outputCart(){

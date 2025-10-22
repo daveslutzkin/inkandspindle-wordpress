@@ -9,8 +9,14 @@
 
 // @todo consider notification stacking and hideNotification() function
 
+var $jq = window.jQuery || window.$;
+
 function notification( options ){
-	
+
+	if ( !$jq ) {
+		return;
+	}
+
 	// Default options
 	var defaults = { 
 		message: 			'', 	// Text/HTML content of message 
@@ -23,14 +29,14 @@ function notification( options ){
 		defaultParentID:    'wknds-notifications' // ID
 	}; 
 	// combine options with default values
-	var options = $.extend({}, defaults, options ); // If you're not using jQuery you need different function here
+	var options = $jq.extend({}, defaults, options ); // If you're not using jQuery you need different function here
 		
 	// Show notification
 	function newNotification(){
 		
 		// setup noticifactions container 
-		if ( $('#wknds-notifications').length < 1 ){
-			$( options.selector ).append( '<div id="' + options.defaultParentID + '"></div>' );
+		if ( $jq('#wknds-notifications').length < 1 ){
+			$jq( options.selector ).append( '<div id="' + options.defaultParentID + '"></div>' );
 		}
 		
 		var el  = '<div class="' + options.defaultClass + '-wrapper">';
@@ -41,7 +47,7 @@ function notification( options ){
 			el += 	'</div>';	
 			el += '</div>';	
 			
-		var $el = $( el );
+		var $el = $jq( el );
 			
 		$el.css({ 
 			//'bottom' : '-100px',
@@ -72,7 +78,6 @@ function notification( options ){
 	newNotification();
 
 }
-
 
 
 
