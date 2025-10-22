@@ -2928,26 +2928,26 @@ background: none;
   .rslides_tabs li.rslides_here a {
     background-color: #ccc; }
 
-.csstransitions .anim-fade-in, .csstransitions .anim-from-left, .csstransitions .anim-from-right {
+.anim-fade-in, .anim-from-left, .anim-from-right {
   opacity: 0;
   position: relative; }
-.csstransitions .anim-fade-in {
+.anim-fade-in {
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
   -ms-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s; }
-.csstransitions .anim-from-left, .csstransitions .anim-from-right {
+.anim-from-left, .anim-from-right {
   -webkit-transition: left 1s, opacity 1s;
   -moz-transition: left 1s, opacity 1s;
   -ms-transition: left 1s, opacity 1s;
   -o-transition: left 1s, opacity 1s;
   transition: left 1s, opacity 1s; }
-.csstransitions .anim-from-left {
+.anim-from-left {
   left: -300px; }
-.csstransitions .anim-from-right {
+.anim-from-right {
   left: 300px; }
-.csstransitions .anim-fade-in.active, .csstransitions .anim-from-left.active, .csstransitions .anim-from-right.active {
+.anim-fade-in.active, .anim-from-left.active, .anim-from-right.active {
   opacity: 1;
   top: 0;
   left: 0; }
@@ -3097,18 +3097,18 @@ ul.sustainable {
     background-color: #fff; }
   ul.sustainable i.icon-plant {
     background-color: #F6EEE0; }
-  .csstransitions ul.sustainable li.js-waypoint {
+  ul.sustainable li.js-waypoint {
     -webkit-transition: left 1s, opacity 1s;
     -moz-transition: left 1s, opacity 1s;
     -ms-transition: left 1s, opacity 1s;
     -o-transition: left 1s, opacity 1s;
     transition: left 1s, opacity 1s;
     opacity: 0; }
-    .csstransitions ul.sustainable li.js-waypoint:nth-child(odd) {
+    ul.sustainable li.js-waypoint:nth-child(odd) {
       left: -300px; }
-    .csstransitions ul.sustainable li.js-waypoint:nth-child(even) {
+    ul.sustainable li.js-waypoint:nth-child(even) {
       left: 300px; }
-    .csstransitions ul.sustainable li.js-waypoint.active {
+    ul.sustainable li.js-waypoint.active {
       opacity: 1;
       left: 0; }
 
