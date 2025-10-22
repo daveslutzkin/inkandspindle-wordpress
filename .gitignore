@@ -4,3 +4,5 @@ content/wflogs
 content/uploads
 downloads
 releases/bk/content/themes/ink/images/home/inkandspindle_process.mp4
+config/wp-config-*.php
+!config/wp-config-sample.php
