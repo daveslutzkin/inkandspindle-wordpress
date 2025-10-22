@@ -1,7 +1,8 @@
 .*.sw?
 
-content/wflogs
+content/debug.log
 content/uploads
+content/wflogs
 downloads
 releases/bk/content/themes/ink/images/home/inkandspindle_process.mp4
 config/wp-config-*.php

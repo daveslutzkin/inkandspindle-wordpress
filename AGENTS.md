@@ -4,7 +4,7 @@
 This WordPress installation keeps the active release under `releases/bk`, with the root-level `app` and `content` directories symlinked there. Custom theme work lives in `content/themes/ink`; use `inc/` for PHP helpers, `partials/` for template fragments, and the `css/` and `js/` folders for assets. Keep plugin-level tweaks inside `content/plugins` and leave the `wp/` core tree untouched. The separate `inkformulas/` directory serves the calculator microsite; update its static assets in-place.
 
 ## Build, Test, and Development Commands
-- `wp server --host=localhost --port=8080 --docroot=.` — Spin up a local development server that respects the current release layout.
+- `WP_ENV=local wp server --host=localhost --port=8080 --docroot=.` — Spin up a local development server that respects the current release layout.
 - `wp theme activate ink` — Ensure the custom Ink & Spindle theme is active after database imports.
 - `wp cache flush` — Clear the object cache (`content/object-cache.php`) after deploying PHP or ACF changes.
 - `php -d detect_unicode=0 -S localhost:8001 index.php` — Alternative built-in PHP server for quick smoke checks when WP-CLI is unavailable.
