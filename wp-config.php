@@ -36,4 +36,6 @@ if (! defined('ABSPATH')) {
     define('ABSPATH', $root_dir . '/app/wp/');
 }
 
-require_once ABSPATH . 'wp-settings.php';
+if (! defined('INK_SKIP_WP_SETTINGS')) {
+    require_once ABSPATH . 'wp-settings.php';
+}
