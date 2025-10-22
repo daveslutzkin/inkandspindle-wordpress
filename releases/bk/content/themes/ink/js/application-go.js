@@ -268,7 +268,17 @@ jQuery(document).ready(function($){
     }
 
     $('#cart').on( 'click', '.item-remove', function(){
-      var index = $(this).parents('.item-row').first().index();
+      var $row = $(this).closest('.item-row');
+      var index = parseInt($(this).attr('data-cart-index'), 10);
+
+      if ( isNaN(index) ) {
+        index = parseInt($row.attr('data-cart-index'), 10);
+      }
+
+      if ( isNaN(index) ) {
+        index = $row.index();
+      }
+
       removeItemFromCart( index );
     });
 

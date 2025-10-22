@@ -41,7 +41,7 @@ function is_wholesaler(){
 
 // Helper functions for URLs
 function wholesale_url(){
-	return HOME_URI . '/wholesale';
+	return HOME_URI . '/trade';
 }
 
 function customise_url(){
@@ -89,7 +89,6 @@ function is_textiles(){
 	}
 	return false;
 }
-
 
 
 

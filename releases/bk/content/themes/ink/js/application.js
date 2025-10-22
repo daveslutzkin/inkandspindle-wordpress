@@ -203,14 +203,14 @@ function outputCart(){
         itemLengthsInMetres.push( value / 1000 + 'm' );
       });
 
-      o += '<tr class="cart-row item-row">';
+      o += '<tr class="cart-row item-row" data-cart-index="' + index + '">';
       o +=   '<td class="description-column">';
       o +=     '<a href="' + item.postUrl + '#!' + item.hash + '">' + item.postTitle + '</a> ';
       o +=     '<br />';
       o +=     item.labels.join(', ');
       o +=   '</td>';
       o +=   '<td class="lengths-column">' + itemLengthsInMetres.join(', ') + '</td>';
-      o +=   '<td class="price-column">' +  item_price.toFixed(2) + ' <div><span class="item-remove">&times;</span></div></td>';
+      o +=   '<td class="price-column">' +  item_price.toFixed(2) + ' <div><span class="item-remove" data-cart-index="' + index + '">&times;</span></div></td>';
       o += '</tr>';
     });
 
