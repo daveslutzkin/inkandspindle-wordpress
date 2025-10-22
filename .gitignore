@@ -1,6 +1,7 @@
 .*.sw?
 
 content/debug.log
+content/updraft
 content/uploads
 content/wflogs
 downloads
