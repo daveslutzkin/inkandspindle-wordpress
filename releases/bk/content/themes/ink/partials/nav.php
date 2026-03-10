@@ -61,7 +61,7 @@ function cart_icon_menu() {
                 </a>
               </li>
               <li>
-                <a href="/order/">
+                <a href="/main/order/">
                   <span><?php cart_icon_svg() ?> Cart (Custom Textiles) </span>
                 </a>
               </li>
@@ -133,10 +133,10 @@ function inspiration_subnav(){
 <div class="primary-navigation">
 	<ul>
 		<li <?php if ( is_front_page() ){ echo 'class="current"'; } ?>><a href="/main/"><span>About</span></a></li>
-		<li <?php if ( is_textiles() ){ echo 'class="current"'; } ?>><a href="<?php echo customise_url(); ?>"><span>Textiles</span></a></li>
+		<li <?php if ( is_textiles() ){ echo 'class="current"'; } ?>><a href="<?php echo customise_url(); ?>"><span>Custom Textiles</span></a></li>
 		<li><a href="<?php echo shop_url(); ?>"><span>Shop</span></a></li>
 		<li <?php if ( is_page( 'curtains-blinds' ) ){ echo 'class="current"'; }?> >
-			<a href="/curtains-blinds"><span>Window Furnishings</span></a>
+			<a href="/curtains-blinds"><span>Curtains & Blinds</span></a>
 		</li>
 		<li <?php if ( is_page( 'environment' ) ){ echo 'class="current"'; }?> >
 			<a href="/sustainable-fabrics"><span>Environment</span></a>
