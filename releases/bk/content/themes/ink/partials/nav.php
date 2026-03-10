@@ -47,7 +47,7 @@ function cart_icon_svg() {
 function cart_icon_menu() {
 ?>
           <li class="has-submenu">
-            <a class="is-top-level has-submenu is-tight-spacing" href="/order/">
+            <a class="is-top-level has-submenu is-tight-spacing" href="#">
               <span>
                 <?php cart_icon_svg() ?>
                 <span class="cart-label"> Cart</span></span
