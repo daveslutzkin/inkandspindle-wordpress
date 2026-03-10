@@ -9,9 +9,9 @@
 
 // @todo consider notification stacking and hideNotification() function
 
-var $jq = window.jQuery || window.$;
-
 function notification( options ){
+
+	var $jq = window.jQuery || window.$;
 
 	if ( !$jq ) {
 		return;

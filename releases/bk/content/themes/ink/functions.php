@@ -1,6 +1,6 @@
 <?php
 define("THEME_VER", "2.5.1");
-define("THEME_MODIFIED_DATE", "202410221225"); // Update when you change CSS or JavaScript in order force browsers to get a fresh version of CSS files etc.
+define("THEME_MODIFIED_DATE", "202603101130"); // Update when you change CSS or JavaScript in order force browsers to get a fresh version of CSS files etc.
 define("VENDOR_MODIFIED_DATE", "20190930-1130");
 
 
