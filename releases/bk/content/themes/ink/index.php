@@ -26,7 +26,7 @@
 
 			<?php else: ?>
 			
-<div id="introduction" class="c waypoint-section">				
+<!-- <div id="introduction" class="c waypoint-section">				
 	<div class="group home-cta" style="margin-top:50px; float:none;">
 		<a class="cta-customise" href="https://shop.inkandspindle.com/collections/fabrics">
 			<span class="img">
@@ -41,7 +41,7 @@
 			</span>
 		</a>
 	</div>
-</div>
+</div>  -->
 			<div id="customise"></div>
 				<h1 class="main-title" style="margin-top: 50px;">
 					<span>Customise</span>

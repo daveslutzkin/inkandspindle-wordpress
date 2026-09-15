@@ -316,7 +316,7 @@
 			<li><a href="https://gallerieb.au/" target="_blank">Gallerie B Interiors (Melbourne Wide)</a></li>
 			<li><a href="http://www.greencollect.org" target="_blank">Green Collect (Yarraville)</a></li>
 			<li><a href="http://www.greenroominteriors.com.au/" target="_blank">Green Room Interiors (Ferntree Gully)</a></li>
-			<li><a href="https://www.innovativecurtains.com.au/" target="_blank">Innovative Curtains & Blinds (Fairfield)</a></li>
+			<li><a href="https://www.innovativecurtains.com.au/" target="_blank">Innovative Curtains & Blinds (Clifton Hill, Reservoir)</a></li>
 			<li><a href="https://interiormoods.com.au/" target="_blank">Interior Moods (Manifold Heights, Geelong)</a></li>
 			<li><a href="http://www.invisageinverloch.com.au/" target="_blank">Invisage Blinds, Drapes & Awnings (Inverloch)</a></li>
 			<li><a href="https://ogormans.com.au/" target="_blank">O'Gormans Window Furnishings (Coburg North)</a></li>

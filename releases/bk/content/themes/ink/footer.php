@@ -15,6 +15,7 @@
 					
 					<h3 class="heading">OPENING HOURS</h3>
 					<p>Tues, Wed, Thurs, Fri: 9am-5pm<br/>Sat: 10am-2pm</p>
+					<p>For Window Furnishing enqiries please call or email to make an appointment.</p>
 				</div>
 				<div class="middle">
 					<h3 class="heading">Contact</h3>

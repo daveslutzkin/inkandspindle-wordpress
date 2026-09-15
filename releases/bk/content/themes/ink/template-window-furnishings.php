@@ -29,11 +29,15 @@ get_header() ?>
 	</p>
 	
 	<p class="narrow-copy p_c_2 -m">Our range of curtains, roman blinds and roller blinds can be manufactured in your choice of design, colour & basecloth to suit your home. Select from our <a href="<?php echo shop_url(); ?>">Ready-Made</a> range of printed fabrics and plain basecloths, or <a href="<?php echo customise_url(); ?>">Customise</a> your own.
-		<br/><br/>For more images and inspiration please check out our <a href="/inspiration/">image gallery</a>.
+		<br/><br/>
+		For more images and inspiration please check out our <a href="/inspiration/">image gallery</a>.
 		<br/><br/>
 		Our locally based workroom have over 40 years experience. Here in the studio we have been producing textiles for window furnishings for over 15 years.
-<br/><br/>
-If you need more hands-on assistance with selecting the right window furnishings and textiles for your home, or need assistance with measuring, we recommend working directly with one of our recommended showrooms or interior specialists. <a class="js-scroll" href="#specialists">See below</a>.</p>
+		<br/><br/>
+If you need more hands-on assistance with selecting the right window furnishings and textiles for your home, or need assistance with measuring, we recommend working directly with one of our recommended showrooms or interior specialists. <a class="js-scroll" href="#specialists">See below</a>.
+		<br/><br/>
+		If you'd like to discuss your project in person please call/email the studio to make an appointment.
+</p>
 
 </div>
 
@@ -168,7 +172,12 @@ We do not recommend "reverse roll" or "overroll" blind orientation except in ver
 	</h2>
 
 	<p class="narrow-copy p_c_2 -m">In order to quote for your window furnishings we need detailed information about your window/s. You can either provide these measurements yourself (via email or in person) or refer to one of our local interior <a class="js-scroll" href="#specialists">specialists</a> if you need an on-site measure & consult.
-		<br/><br/>If self measuring, here are some details we need to know:
+		<br/><br/>If self measuring, please refer to the measuring diagrams below and email us the following order form/s for an initial quote:<br/><br/>
+
+- <a href="https://inkandspindle.com.au/downloads/Roller_Blinds_Brochure_form.pdf">Roller Blind Order Form</a><br/>
+- <a href="https://inkandspindle.com.au/downloads/Roman_Blinds_Brochure_form.pdf">Roman Blind Order Form</a><br/>
+- <a href="https://inkandspindle.com.au/downloads/Curtain_Brochure_form.pdf">Curtain Order Form</a>
+
 	</p>
 	<div class="p_i_0 anim-fade-in js-waypoint">
 		<div class="rimg" style="padding-bottom: 66%;">
@@ -190,7 +199,9 @@ For all blinds please advise your mounting preference and let us know if your wi
 
 <p class="narrow-copy p_c_2 -m">If your window has an existing curtain track please provide measurements (C) and (D) as described above. A photo of your existing track is useful to ensure it is compatible with our curtain header. If there is  no existing track please provide measurements (E) and (F) and also distance to any adjacent walls, structure or furniture. If you would like your curtains to be drawn back completely clear of the window the track will need to be approx 30-35% wider than the window.
 <br/><br/>
-Please provide these measurements via email, along with your choice of fabric (<a href="<?php echo shop_url(); ?>">Ready-Made</a> or <a href="<?php echo customise_url(); ?>">Customised</a>) and preferred lining (blockout, cotton or unlined). A photo of your window is also very useful to ensure no details are missed. 
+Please provide these measurements via email, along with your choice of fabric (<a href="<?php echo shop_url(); ?>">Ready-Made</a> or <a href="<?php echo customise_url(); ?>">Customised</a>) and preferred lining (blockout, cotton or unlined). A photo of your window is also very useful to ensure no details are missed.
+	<br/><br/>
+		** If you would like to discuss your project in person please call/email the studio to make an appointment. **
 </div>
 
 <div id="installation" class="c waypoint-section">
@@ -242,7 +253,7 @@ For self installation please refer to our installation guides below:<br/><br/>
 			<li><a href="https://gallerieb.au/" target="_blank">Gallerie B Interiors (Melbourne Wide)</a></li>
 			<li><a href="http://www.greencollect.org" target="_blank">Green Collect (Yarraville)</a></li>
 			<li><a href="http://www.greenroominteriors.com.au/" target="_blank">Green Room Interiors (Ferntree Gully)</a></li>
-			<li><a href="https://www.innovativecurtains.com.au/" target="_blank">Innovative Curtains & Blinds (Fairfield)</a></li>
+			<li><a href="https://www.innovativecurtains.com.au/" target="_blank">Innovative Curtains & Blinds (Clifton Hill, Reservoir)</a></li>
 			<li><a href="https://interiormoods.com.au/" target="_blank">Interior Moods (Manifold Heights, Geelong)</a></li>
 			<li><a href="http://www.invisageinverloch.com.au/" target="_blank">Invisage Blinds, Drapes & Awnings (Inverloch)</a></li>
 			<li><a href="https://ogormans.com.au/" target="_blank">O'Gormans Window Furnishings (Coburg North)</a></li>

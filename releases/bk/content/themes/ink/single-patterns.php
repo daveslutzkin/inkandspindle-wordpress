@@ -97,7 +97,7 @@
 					<ul>
 						<li>Prices are based on the selected basecloth</li>
 						<li>Minimum order: <span id="min_order">2.5</span>m</li>
-						<li>Available in repeats of <?php pattern__vertical_repeat(); ?>m</li>
+						<li>Available in repeats of <?php pattern__vertical_repeat(); ?>mm</li>
 						<!-- <li>See our <a href="<?php echo faq_url(); ?>">FAQ</a> for more</li> -->
 					</ul>
 					<p>
